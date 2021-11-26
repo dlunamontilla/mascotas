@@ -1,0 +1,126 @@
+::-moz-focus-inner {
+  border: 0;
+}
+
+:root {
+  font-family: "Nunito", sans-serif;
+  background-color: #a786df;
+}
+
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+[type="text"],
+[type="email"],
+[type="number"] {
+  border: 1px solid;
+  min-height: 30px;
+  font: inherit;
+  transition: 300ms ease;
+  padding: 0 10px;
+  outline: medium none;
+}
+[type="text"]:focus,
+[type="email"]:focus,
+[type="number"]:focus {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  background-image: none;
+  transition: 300ms ease;
+  min-height: 35px;
+  padding: 0 10px;
+}
+
+.perfil-form {
+  --padding: 20px;
+  margin: 0 auto;
+  background-color: #fdc7d7;
+  padding-top: calc(var(--padding) * 2);
+  padding-bottom: calc(var(--padding) * 2);
+  border-left: 1px solid #f96591;
+  border-right: 1px solid #f96591;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  max-width: 400px;
+}
+.perfil-form__photo {
+  margin: 20px auto;
+  padding: 10px;
+  --diametro: 250px;
+  width: var(--diametro);
+  text-align: center;
+}
+.perfil-form__photo img {
+  border-radius: 50%;
+  width: calc(var(--diametro) / 2);
+  height: calc(var(--diametro) / 2);
+  object-fit: cover;
+  object-position: center top;
+}
+.perfil-form__photo p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.perfil-form__photo__enlace {
+  text-decoration: none;
+  transition: 300ms ease;
+  color: #5c031d;
+  font-weight: 600;
+}
+.perfil-form__photo__enlace:hover {
+  opacity: 0.7;
+}
+.perfil-form__photo__enlace:active {
+  opacity: 1;
+  transition: none;
+}
+.perfil-form__title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.form {
+  --field-height: 40px;
+}
+.form__text {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+.form__text span,
+.form__text input {
+  display: block;
+}
+.form__text input {
+  width: 100%;
+  height: var(--field-height);
+  border: 1px solid #999999;
+  margin-top: 3px;
+}
+.form__buttons__button {
+  display: block;
+  width: 100%;
+  background-color: #0f172c;
+  color: white;
+  border: 0;
+  min-height: var(--field-height);
+  border-radius: calc(var(--field-height));
+}
+.form__buttons__button:hover {
+  background-color: #1c2b52;
+}
+.form__buttons__button:active {
+  background-color: #0f172c;
+  transition: none;
+}
+
+/*# sourceMappingURL=style.css.map */
