@@ -1,0 +1,88 @@
+.text {
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+}
+
+// Barra de navegación:
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    // Esta propiedad es temporal:
+    color: white;
+}
+
+// Logotipo:
+.logo {
+    --size: 100px;
+
+    margin-right: 10px;
+    transition: 300ms ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 1;
+        transition: none;
+    }
+
+    &,
+    &__image {
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+
+        justify-content: center;
+
+        img {
+            display: block;
+            position: absolute;
+            max-width: 100%;
+            max-height: 80%;
+        }
+    }
+}
+
+// Menú de navegación:
+.menu {
+    display: flex;
+    list-style: none;
+
+    padding: 0;
+
+    &__item {
+        &__enlace {
+            padding: 0 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: 300ms ease;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &:active {
+                opacity: 1;
+                transition: none;
+            }
+        }
+    }
+}

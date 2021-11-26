@@ -133,3 +133,88 @@ button,
         }
     }
 }
+
+// Contenedor de botones:
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__text {
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 801px) {
+            max-width: 300px;
+        }
+    }
+}
+
+// Botón de animales:
+.button {
+    --height: 100px;
+    --icon-size: calc(var(--height) * 0.8);
+    --gap: 10px;
+
+    height: var(--height);
+    max-width: calc(var(--height) * 3);
+    flex-grow: 1;
+
+    padding-right: var(--gap);
+
+    background-color: $color;
+    color: rgba(white, 0.7);
+    font: inherit;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: 300ms ease;
+    cursor: default;
+
+    &--cat {
+        background-color: desaturate($color, 70);
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transition: none;
+        opacity: 1;
+    }
+
+    &__image {
+        position: relative;
+        background-color: rgba(white, 0.4);
+        overflow: hidden;
+        width: var(--icon-size);
+        height: var(--icon-size);
+
+        border-radius: calc(var(--icon-size) / 2);
+        margin-right: var(--gap);
+        margin-left: var(--gap);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: calc(var(--icon-size) * 0.6);
+            max-height: calc(var(--icon-size) * 0.8);
+        }
+    }
+
+    &__container {
+        p,
+        h3 {
+            margin: 0;
+        }
+    }
+}
