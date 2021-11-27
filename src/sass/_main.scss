@@ -40,6 +40,7 @@
     
     margin-right: 10px;
     transition: 300ms ease;
+    cursor: pointer;
 
     &:hover {
         opacity: 0.7;
@@ -66,10 +67,29 @@
         margin-right: var(--gap);
 
         img {
-            display: block;
             position: absolute;
             max-width: 100%;
-            max-height: 80%;
+        }
+
+        svg,
+        img {
+            display: block;
+            max-height: 60%;
+        }
+
+        svg {
+            width: 100%;
+        }
+
+        path {
+            transition: 300ms ease;
+            fill: rgba(white, 0.7);
+        }
+
+        &:hover {
+            path {
+                fill: $color-base;
+            }
         }
     }
 }
@@ -116,5 +136,6 @@
     &__item {
         flex-grow: 1;
         flex-basis: 50%;
+        padding: 20px;
     }
 }

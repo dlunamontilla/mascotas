@@ -1,45 +1,72 @@
 <div class="register">
-    <div class="register__item"></div>
+    <div class="register__item">
+        <h2>Lista de usuarios</h2>
+        <hr>
 
-    <div class="perfil-form register__item">
-        <form class="form" action="http://localhost:4000/usuarios" method="post">
-            <!-- Campos del formulario -->
-            <label class="form__text">
-                <span>URL:</span>
-                <input type="text" name="url" id="url" />
-            </label>
+
+    </div>
+
+    <div class="register__item">
+        <h2 class="text-center">Agregar nuevos usuarios</h2>
+        <div class="perfil-form">
+            <form class="form" action="http://localhost:4000/usuarios" method="post" id="form-register">
+                <!-- Campos del formulario -->
+                <label class="form__text">
+                    <span>URL de la imagen:</span>
+                    <input type="text" name="url" id="url" placeholder="URL de la imagen" required="" />
+                </label>
+                
+                <div class="form__group-fields">
+                    <label class="form__text">
+                        <span>Nombres:</span>
+                        <input type="text" name="name" id="name" placeholder="Ingrese su nombre" required="" />
+                    </label>
+            
+                    <label class="form__text">
+                        <span>Apellidos</span>
+                        <input type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido" required="" />
+                    </label>
+                </div>
+                
+                <div class="form__group-fields">
+                    <label class="form__text">
+                        <span>Usuario:</span>
+                        <input type="text" name="username" id="username" placeholder="Ingrese su usuario" required="" />
+                    </label>
     
-            <label class="form__text">
-                <span>Nombres:</span>
-                <input type="text" name="name" id="name" />
-            </label>
+                    <label class="form__text">
+                        <span>Correo electrónico:</span>
+                        <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" />
+                    </label>
+                </div>
+
+                <div class="form__group-fields">
+                    <label class="form__text">
+                        <span>Contraseña:</span>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" required="" />
+                    </label>
     
-            <label class="form__text">
-                <span>Apellidos</span>
-                <input type="text" name="lastname" id="lastname" />
-            </label>
-    
-            <label class="form__text">
-                <span>Usuario:</span>
-                <input type="text" name="username" id="username" />
-            </label>
-    
-            <label class="form__text">
-                <span>correo electrónico:</span>
-                <input type="email" name="email" id="email" />
-            </label>
-    
-            <label class="form__text">
-                <span>Descripción</span>
-                <textarea name="description" id="description"></textarea>
-            </label>
-    
-            <!-- Botones del formulario -->
-            <div class="group-buttons">
-                <button type="submit">Guardar</button>
-                <button type="button">Buscar por correo</button>
-                <button type="button">Modificar</button>
-            </div>
-        </form>
+                    <label class="form__text">
+                        <span>Repita la contraseña:</span>
+                        <input type="password" id="repeat-password" placeholder="Repita la contraseña"/>
+                    </label>
+                </div>
+        
+                <label class="form__text">
+                    <span>Descripción</span>
+                    <textarea name="description" id="description" placeholder="Agregue alguna descripción"></textarea>
+                </label>
+
+                <hr>
+
+
+                <!-- Botones del formulario -->
+                <div class="group-buttons group-buttons--distribute">
+                    <button type="button" class="button button--success">Buscar por correo</button>
+                    <button type="button" class="button button--danger">Modificar</button>
+                    <button type="submit" class="button button--primary">Guardar</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
