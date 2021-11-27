@@ -33,4 +33,4 @@ Si queremos cargar el contenido del archivo `mascotas.html` en nuestro archivo p
 getModule("src/html/mascotas.html", "#container");
 ```
 
-Donde `src/html/mascotas.html` es la ubicación del archivo el que queremos tomar su contenido y `#container` el elemento HTML donde queremos cargar el contenido del archivo seleccionado.
+Donde `src/html/mascotas.html` es la ubicación del archivo al que queremos tomar su contenido y `#container` el elemento HTML donde queremos cargar el contenido del archivo seleccionado.
