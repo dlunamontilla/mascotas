@@ -63,6 +63,26 @@
       "password": "YPmShB8hpb93xmL",
       "description": "Comprobando getFormData",
       "id": 9
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "David Eduardo",
+      "lastname": "Luna Montilla",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "ciencia",
+      "description": "Ciencia de datos",
+      "id": 10
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "asdfasdf",
+      "lastname": "adfasd",
+      "username": "fasdf",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
+      "id": 11
     }
   ]
 }
