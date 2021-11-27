@@ -58,4 +58,6 @@ const formRegister = async () => {
     };
 };
 
-formRegister();
+// formRegister();
+
+getModule("src/html/mascotas.html", "#container");
