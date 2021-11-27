@@ -1,3 +1,22 @@
 {
-    "usuarios": []
+  "usuarios": [
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "David Eduardo",
+      "lastname": "Luna Montilla",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "description": "Esta es una prueba que estoy realizando",
+      "id": 1
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "David",
+      "lastname": "Luna",
+      "username": "cienciadedatos",
+      "email": "cienciadedatos@gmail.com",
+      "description": "Esta es una prueba de formulario",
+      "id": 2
+    }
+  ]
 }

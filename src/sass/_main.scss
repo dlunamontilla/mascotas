@@ -1,3 +1,7 @@
+.header {
+    background-color: darken(white, 85);
+    color: white;
+}
 .text {
     &-center {
         text-align: center;
@@ -21,12 +25,19 @@
     
     // Esta propiedad es temporal:
     color: white;
+
+    &--header {
+        min-height: 70px;
+        width: calc(100% - 20px);
+        margin: 0 auto;
+    }
 }
 
 // Logotipo:
 .logo {
-    --size: 100px;
-
+    --size: 80px;
+    --gap: 10px;
+    
     margin-right: 10px;
     transition: 300ms ease;
 
@@ -49,8 +60,10 @@
         position: relative;
         width: var(--size);
         height: var(--size);
+        max-height: 80px;
 
         justify-content: center;
+        margin-right: var(--gap);
 
         img {
             display: block;
@@ -84,5 +97,24 @@
                 transition: none;
             }
         }
+    }
+}
+
+// Contenedor de la aplicación
+.container {
+    max-width: $max-width;
+    width: $width;
+    margin: 0 auto;
+
+}
+
+.register {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    &__item {
+        flex-grow: 1;
+        flex-basis: 50%;
     }
 }

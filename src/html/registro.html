@@ -1,76 +1,45 @@
+<div class="register">
+    <div class="register__item"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img
-                    src="https://res.cloudinary.com/duzf4vfki/image/upload/v1630692325/Clases/geek_wctguy.png"
-                    width="80" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
-                    </li>
-                </ul>
+    <div class="perfil-form register__item">
+        <form class="form" action="http://localhost:4000/usuarios" method="post">
+            <!-- Campos del formulario -->
+            <label class="form__text">
+                <span>URL:</span>
+                <input type="text" name="url" id="url" />
+            </label>
+    
+            <label class="form__text">
+                <span>Nombres:</span>
+                <input type="text" name="name" id="name" />
+            </label>
+    
+            <label class="form__text">
+                <span>Apellidos</span>
+                <input type="text" name="lastname" id="lastname" />
+            </label>
+    
+            <label class="form__text">
+                <span>Usuario:</span>
+                <input type="text" name="username" id="username" />
+            </label>
+    
+            <label class="form__text">
+                <span>correo electrónico:</span>
+                <input type="email" name="email" id="email" />
+            </label>
+    
+            <label class="form__text">
+                <span>Descripción</span>
+                <textarea name="description" id="description"></textarea>
+            </label>
+    
+            <!-- Botones del formulario -->
+            <div class="group-buttons">
+                <button type="submit">Guardar</button>
+                <button type="button">Buscar por correo</button>
+                <button type="button">Modificar</button>
             </div>
-        </div>
-    </nav>
-
-
-    <!--CRUD-->
-
-    <div class="container mt-5">
-
-        <hr />
-        <div class="row">
-
-            <div div class="col-7">
-                <h3 class="text-center">Lista de Usuarios</h3>
-                <ul class="list-group">
-
-                </ul>
-            </div>
-
-            <div div class="col-5">
-                <h3 class="text-center"> Agregar Usuario </h3>
-
-                <form action="http://localhost:4000/usuarios" method="post" class="form-group">
-                    <input id="inputUrl" type="text" class="form-control " placeholder="Url imagen" name="url"
-                        required />
-
-                    <input type="text" name="name" id="name" class="form-control mt-2" autocomplete="off"
-                        placeholder="Nombres" />
-
-                    <input type="text" name="lastname" id="lastname" class="form-control mt-2" autocomplete="off"
-                        placeholder="Apellidos">
-                    <input id="inputNombre" type="text" class="form-control mt-2" name="nombre" autoComplete="off"
-                        placeholder="Nombre Usuario" required />
-
-                    <input id="inputCorreo" type="text" class="form-control mt-2" name="correo" autoComplete="off"
-                        placeholder="Correo Usuario" required />
-
-
-                    <textarea id="inputDescripcion" class="form-control mt-2" autoComplete="off" name="descripcion"
-                        placeholder="Descripción" required></textarea>
-
-                    <input id="inputId" type="text" class="form-control mt-2" name="id" autoComplete="off" />
-
-                    <div class="d-grid gap-2 mx-auto mt-2">
-                        <button type="submit" class="btn btn-dark">
-                            Guardar
-                        </button>
-                        <button id="btnCorreo" type="button" class="btn btn-dark">
-                            Buscar por correo
-                        </button>
-                        <button id="btnModificar" type="button" class="btn btn-dark">
-                            Modificar
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
+        </form>
     </div>
+</div>
