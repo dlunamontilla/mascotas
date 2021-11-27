@@ -122,9 +122,18 @@
 
 // Contenedor de la aplicación
 .container {
+    --padding: 20px;
+
     max-width: $max-width;
     width: $width;
     margin: 0 auto;
+
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+
+    &--mascotas {
+        
+    }
 
 }
 

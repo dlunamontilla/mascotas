@@ -121,9 +121,12 @@ hr {
 }
 
 .container {
+  --padding: 20px;
   max-width: 1200px;
   width: calc(100% - 20px);
   margin: 0 auto;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
 }
 
 .register {
@@ -351,6 +354,9 @@ button:active,
   cursor: default;
   max-width: calc(var(--height) * 3);
   color: white;
+}
+.button--dog {
+  background-color: #000033;
 }
 .button--cat {
   background-color: #121221;

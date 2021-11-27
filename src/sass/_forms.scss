@@ -252,6 +252,11 @@ button,
         max-width: calc(var(--height) * 3);
         color: white;
     }
+    
+    &--dog {
+        background-color: $color;
+    }
+
     &--cat {
         background-color: desaturate($color, 70);
     }
