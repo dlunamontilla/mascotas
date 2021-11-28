@@ -61,3 +61,31 @@ const formRegister = async () => {
 // formRegister();
 
 getModule("src/html/mascotas.html", "#container");
+
+
+
+/**
+ * Al seleccionar un menú de navegación con esta función debe
+ * tomar en cuenta debe tener enlaces.
+ * 
+ * @param {string} selector
+ * Debe ingresar un selector para seleccionar un menú. Es 
+ * obligatorio que el menú tenga enlaces.
+ * 
+ * @returns { void }
+ */
+const menu = (selector) => {
+    const menuHeader = document.querySelector(selector);
+    if (!menuHeader) return;
+
+    menuHeader.onclick = (e) => {
+        e.preventDefault();
+        const element = e.target;
+        
+        if (element.href) {
+            getModule(element.href, "#container", true);
+        }
+    }
+};
+
+menu("#menu-header");

@@ -1,88 +1,14 @@
 {
   "usuarios": [
     {
-      "id": 3,
-      "email": "ciencia"
-    },
-    {
-      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
-      "name": "David Eduardo",
-      "lastname": "Luna Mntilla",
-      "username": "dlunamontilla",
-      "email": "davidlunamontilla@gmail.com",
-      "description": "Incluye un archivo de prueba",
-      "archivos": "photo_2021-09-30_16-02-01.jpg",
-      "id": 4
-    },
-    {
-      "url": "dfasdf",
-      "name": "asdfasdf",
-      "lastname": "asdfasdf",
-      "username": "asdfasd",
-      "email": "fasdfasdf@gmail.com",
-      "password": "asdfasdf",
-      "description": "asdfasd",
-      "id": 5
-    },
-    {
-      "url": "fadfad",
-      "name": "fasdfa",
-      "lastname": "dsfasdf",
-      "username": "asdfasdf",
-      "email": "davidlunamontilla@gmail.com",
-      "password": "YPmShB8hpb93xmLfasdfa",
-      "description": "Enviado mediante Ajax",
-      "id": 6
-    },
-    {
-      "url": "aadfad",
-      "name": "fadsfads",
-      "lastname": "adsfasd",
-      "username": "fadsfasd",
-      "email": "davidlunamontilla@gmail.com",
-      "password": "dfadf",
-      "description": "Enviado mediante Ajax",
-      "id": 7
-    },
-    {
-      "url": "adfasdf",
-      "name": "dfadf",
-      "lastname": "adsfasdf",
-      "username": "asdfasd",
-      "email": "davidlunamontilla@gmail.com",
-      "password": "YPmShB8hpb93xmL",
-      "description": "Otro envío",
-      "id": 8
-    },
-    {
-      "url": "asfads",
-      "name": "adasdfa",
-      "lastname": "dsfasdfa",
-      "username": "sdfasdf",
-      "email": "cienciadedatos@gmail.com",
-      "password": "YPmShB8hpb93xmL",
-      "description": "Comprobando getFormData",
-      "id": 9
-    },
-    {
-      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
-      "name": "David Eduardo",
-      "lastname": "Luna Montilla",
-      "username": "dlunamontilla",
-      "email": "davidlunamontilla@gmail.com",
-      "password": "ciencia",
-      "description": "Ciencia de datos",
-      "id": 10
-    },
-    {
-      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
-      "name": "asdfasdf",
-      "lastname": "adfasd",
-      "username": "fasdf",
-      "email": "davidlunamontilla@gmail.com",
-      "password": "50eeb5d6417b1687fd71bb3952a524db",
-      "description": "Ciencia de datos",
-      "id": 11
+      "url": "https://www.ebookfinder.cc/?p=Cartas+De+Angeles+De+Luz&ln=es",
+      "name": "tatiana",
+      "lastname": "castro rojas",
+      "username": "1101_nicolurrea",
+      "email": "tatis_elka@hotmail.com",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "description": "hola",
+      "id": 1
     }
   ]
 }
