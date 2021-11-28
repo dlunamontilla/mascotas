@@ -2,21 +2,36 @@ import { getFormData } from "./register.js";
 import getModule from "./render.js";
 import {} from "./svg.js";
 
+import getUsers from "./modules/getusers.js";
+
 /**
  * Formulario de registro
+ * @param {string} path Ruta del formulario de registro
+ *
+ * @returns { void }
  */
-const formRegister = async () => {
+const formRegister = (path) => {
     // Probando nuestra función:
-    await getModule("src/html/registro.html", "#container");
+    const _path = "src/html/registro.html";
+    if (_path !== path) return;
 
     const register = document.querySelector("#form-register");
     if (!register) return;
 
     const passwords = register.querySelectorAll("[type='password']");
 
-    const [a, b] = passwords;
-    console.log(a, b);
+    console.log(passwords);
 
+    // Obtenemos los campos de contraseña del formulario
+    const [a, b] = passwords;
+
+    /**
+     *
+     * @param {HTMLInputElement} a Contraseña
+     * @param {HTMLInputElement} b Contraseña repetida
+     * @returns { void }
+     *
+     */
     const coincide = (a, b) => {
         if (!(a || b)) return;
 
@@ -30,15 +45,22 @@ const formRegister = async () => {
         b.classList.remove("form__text--pass");
     };
 
-    a.oninput = () => {
+    // Capturar evento de entrada de datos en el
+    // campo de contraseña:
+    a.addEventListener("input", () => {
         coincide(a, b);
-    };
+    });
 
-    b.oninput = () => {
+    // Capturar evento de entrada de datos en el
+    // campo de contraseña repetida:
+    b.addEventListener("input", () => {
         coincide(b, a);
-    };
+    });
 
-    register.onsubmit = async (e) => {
+    // Capturar el evento de envío del formulario de registro de
+    // usuarios para capturar sus datos y realizar el envío mediante
+    // Ajax utilizando la función fetch():
+    register.addEventListener("submit", async function (e) {
         e.preventDefault();
         const data = getFormData(register);
 
@@ -55,23 +77,17 @@ const formRegister = async () => {
                 "Content-Type": "application/json; charset=utf-8",
             },
         });
-    };
+    });
 };
-
-// formRegister();
-
-// getModule("src/html/mascotas.html", "#container");
-
-
 
 /**
  * Al seleccionar un menú de navegación con esta función debe
  * tomar en cuenta debe tener enlaces.
- * 
+ *
  * @param {string} selector
- * Debe ingresar un selector para seleccionar un menú. Es 
+ * Debe ingresar un selector para seleccionar un menú. Es
  * obligatorio que el menú tenga enlaces.
- * 
+ *
  * @returns { void }
  */
 const menu = async (selector) => {
@@ -81,17 +97,30 @@ const menu = async (selector) => {
     let pathModule = localStorage.getItem("module");
     pathModule ??= "src/html/mascotas.html";
 
+    // Datos predefinidos al momento de cargar la página
+    // web en el navegador:
     await getModule(pathModule, "#container", true);
 
+    formRegister(pathModule);
+    // Probaremos nuestra función antes de continuar:
+    getUsers("data/bdusers.json", "#users-data");
+    
     menuHeader.onclick = async (e) => {
         e.preventDefault();
         const element = e.target;
-        
+
         if (element.href) {
-            await getModule(element.href, "#container", true);
-            localStorage.setItem("module", element.href);
+            const href = element.getAttribute("href");
+
+            await getModule(href, "#container", true);
+            localStorage.setItem("module", href);
+
+            formRegister(href);
+
+            // Probaremos nuestra función antes de continuar:
+            getUsers("data/bdusers.json", "#users-data");
         }
-    }
+    };
 };
 
 menu("#menu-header");

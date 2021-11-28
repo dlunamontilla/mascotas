@@ -1,14 +1,24 @@
 {
   "usuarios": [
     {
-      "url": "https://www.ebookfinder.cc/?p=Cartas+De+Angeles+De+Luz&ln=es",
-      "name": "tatiana",
-      "lastname": "castro rojas",
-      "username": "1101_nicolurrea",
-      "email": "tatis_elka@hotmail.com",
-      "password": "202cb962ac59075b964b07152d234b70",
-      "description": "hola",
-      "id": 1
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "Tatiana",
+      "lastname": "Castro",
+      "username": "tatiacastro",
+      "email": "tatianacastro@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
+      "id": 2
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "David",
+      "lastname": "Luna",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Contenido de prueba",
+      "id": 4
     }
   ]
 }

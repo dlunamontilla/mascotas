@@ -142,10 +142,20 @@
     justify-content: space-between;
     padding: 20px;
 
+    background-color: rgba(white, 0.3);
+
     &__item {
         flex-grow: 1;
         flex-basis: 50%;
         padding: 20px;
+
+        &--users {
+            border-right: 1px solid $color-base;
+
+            img {
+                max-width: 150px;
+            }
+        }
     }
 }
 
@@ -161,4 +171,43 @@
     margin: 20px auto;
     border-radius: 5px;
     transition: 300ms ease;
+}
+
+// Tablas:
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(white, 0.2);
+
+    th, td {
+        padding: 5px;
+    }
+
+    th {
+        background-color: $color-secundario;
+        color: white;
+        height: 40px;
+
+        border: 1px solid lighten($color-secundario, 15);
+    }
+    
+    tr {
+        transition: 300ms ease;
+        &:nth-of-type(2n + 1) {
+            td {
+                background-color: rgba(black, 0.05);
+            }
+        }
+
+        &:hover {
+            background-color: rgba(white, 0.2);
+        }
+    }
+    td {
+        border: 1px solid white;
+
+        &:first-of-type {
+            text-align: center;
+        }
+    }
 }

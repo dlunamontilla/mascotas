@@ -133,11 +133,18 @@ hr {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .register__item {
   flex-grow: 1;
   flex-basis: 50%;
   padding: 20px;
+}
+.register__item--users {
+  border-right: 1px solid #fdc7d7;
+}
+.register__item--users img {
+  max-width: 150px;
 }
 
 .interfaz {
@@ -149,6 +156,36 @@ hr {
   margin: 20px auto;
   border-radius: 5px;
   transition: 300ms ease;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table th, .table td {
+  padding: 5px;
+}
+.table th {
+  background-color: #0f172c;
+  color: white;
+  height: 40px;
+  border: 1px solid #223565;
+}
+.table tr {
+  transition: 300ms ease;
+}
+.table tr:nth-of-type(2n + 1) td {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.table tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table td {
+  border: 1px solid white;
+}
+.table td:first-of-type {
+  text-align: center;
 }
 
 [type="text"],
