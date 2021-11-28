@@ -162,14 +162,18 @@ hr {
   border-collapse: collapse;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 .table th, .table td {
-  padding: 5px;
+  padding: 5px 10px;
 }
 .table th {
   background-color: #0f172c;
   color: white;
   height: 40px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
   border: 1px solid #223565;
 }
 .table tr {
@@ -182,10 +186,16 @@ hr {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .table td {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 .table td:first-of-type {
   text-align: center;
+}
+.table td:last-of-type {
+  text-align: center;
+}
+.table td[colspan] {
+  height: 70px;
 }
 
 [type="text"],

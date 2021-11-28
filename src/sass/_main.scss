@@ -178,15 +178,23 @@
     border-collapse: collapse;
     width: 100%;
     background-color: rgba(white, 0.2);
+    border-radius: 5px;
 
     th, td {
-        padding: 5px;
+        padding: 5px 10px;
     }
 
     th {
         background-color: $color-secundario;
         color: white;
         height: 40px;
+
+        font: {
+            size: 0.7rem;
+            weight: 400;
+        }
+
+        text-transform: uppercase;
 
         border: 1px solid lighten($color-secundario, 15);
     }
@@ -204,10 +212,18 @@
         }
     }
     td {
-        border: 1px solid white;
+        border: 1px solid rgba(white, 0.4);
 
         &:first-of-type {
             text-align: center;
+        }
+
+        &:last-of-type {
+            text-align: center;
+        }
+
+        &[colspan] {
+            height: 70px;
         }
     }
 }

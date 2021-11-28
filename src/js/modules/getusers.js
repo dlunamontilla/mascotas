@@ -19,6 +19,8 @@ const getUsers = async (url, selector) => {
     const usersContent = document.querySelector(selector);
     if (!usersContent) return;
 
+    usersContent.textContent = "";
+    
     const response = await fetch(url);
     const data = await response.json();
 
@@ -37,10 +39,11 @@ const getUsers = async (url, selector) => {
             <th>Acciones</th>
         </tr>`
     );
+    
 
     data.usuarios.forEach(user => {
         const { id, url, name, lastname} = user;
-
+        
         tbody.insertAdjacentHTML(
             'beforeend',
 
@@ -50,12 +53,22 @@ const getUsers = async (url, selector) => {
                 <td>${lastname}</td>
                 <td>
                     <form action="http://localhost:4000/usuarios/${id}">
-                        <button type="submit">Eliminar</button>
+                        <button type="submit" class="button button--danger">Eliminar</button>
                     </form>
                 </td>
             </tr>`
         );
     });
+
+    if ( !(data.usuarios.length > 0) ) {
+        tbody.insertAdjacentHTML(
+            'beforeend',
+
+            `<tr>
+                <td colspan="4">No hay usuarios</td>
+            </tr>`
+        )
+    }
 
     usersContent.appendChild(table);
 
@@ -72,6 +85,11 @@ const getUsers = async (url, selector) => {
             method: "DELETE"
         });
 
+        
+        console.log( "Capturados", element.parentNode.parentNode.length );
+        if (!(data.usuarios.length > 0)) {
+            getUsers(url, selector);
+        }
         element.parentNode.parentNode.remove();
     }
 }

@@ -2,22 +2,42 @@
   "usuarios": [
     {
       "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
-      "name": "Tatiana",
-      "lastname": "Castro",
-      "username": "tatiacastro",
-      "email": "tatianacastro@gmail.com",
+      "name": "David",
+      "lastname": "Luna",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos\n\nEsta es otra prueba realizanda.",
+      "id": 1
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "Francisco",
+      "lastname": "Luna",
+      "username": "flunamontilla",
+      "email": "davidlunamontilla@gmail.com",
       "password": "50eeb5d6417b1687fd71bb3952a524db",
       "description": "Ciencia de datos",
       "id": 2
     },
     {
       "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
-      "name": "David",
-      "lastname": "Luna",
+      "name": "Tatiana",
+      "lastname": "Castro",
       "username": "dlunamontilla",
       "email": "davidlunamontilla@gmail.com",
       "password": "50eeb5d6417b1687fd71bb3952a524db",
-      "description": "Contenido de prueba",
+      "description": "Ciencia de datos",
+      "id": 3
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "Francisco",
+      "lastname": "Guedez",
+      "username": "fguedez",
+      "email": "franciscoguedez@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
       "id": 4
     }
   ]

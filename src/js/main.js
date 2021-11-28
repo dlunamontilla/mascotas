@@ -77,6 +77,9 @@ const formRegister = (path) => {
                 "Content-Type": "application/json; charset=utf-8",
             },
         });
+
+        // Probaremos nuestra función antes de continuar:
+        await getUsers("data/bdusers.json", "#users-data");
     });
 };
 
@@ -104,7 +107,7 @@ const menu = async (selector) => {
     formRegister(pathModule);
     // Probaremos nuestra función antes de continuar:
     getUsers("data/bdusers.json", "#users-data");
-    
+
     menuHeader.onclick = async (e) => {
         e.preventDefault();
         const element = e.target;
