@@ -141,7 +141,7 @@ hr {
 }
 
 .interfaz {
-  min-height: 700px;
+  min-height: 400px;
   max-width: 450px;
   border: 1px solid #f96591;
   background-color: #fdc7d7;
@@ -226,7 +226,7 @@ button:active,
   box-shadow: 0 0 10px rgba(15, 23, 44, 0.3);
   padding-left: var(--padding);
   padding-right: var(--padding);
-  max-width: 450px;
+  max-width: 400px;
   min-width: 350px;
 }
 .perfil-form__photo {
@@ -275,6 +275,8 @@ button:active,
   position: relative;
   display: block;
   width: 100%;
+  margin-bottom: 10px;
+  font-weight: 300;
 }
 .form__text--pass {
   --fondo: #005a00;
@@ -295,7 +297,7 @@ button:active,
 .form__text textarea {
   width: 100%;
   border: var(--border) var(--border-color);
-  margin-top: 3px;
+  margin-top: 5px;
 }
 .form__text textarea {
   min-height: 100px;
@@ -421,8 +423,9 @@ button:active,
 }
 
 .group-buttons {
-  --display: initial;
+  --display: block;
   display: var(--display);
+  margin-top: 30px;
 }
 .group-buttons--distribute {
   --display: flex;

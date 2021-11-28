@@ -71,7 +71,7 @@ button,
     padding-left: var(--padding);
     padding-right: var(--padding);
 
-    max-width: 450px;
+    max-width: 400px;
     min-width: 350px;
 
     &__photo {
@@ -137,7 +137,9 @@ button,
         position: relative;
         display: block;
         width: 100%;
-
+        margin-bottom: 10px;
+        font-weight: 300;
+        
         &--pass {
             $color: rgb(0, 95, 0);
             --fondo: #{darken($color, 1)};
@@ -163,7 +165,7 @@ button,
         textarea {
             width: 100%;
             border: var(--border) var(--border-color);
-            margin-top: 3px;
+            margin-top: 5px;
         }
         
         textarea {
@@ -326,8 +328,10 @@ button,
 }
 
 .group-buttons {
-    --display: initial;
+    --display: block;
     display: var(--display);
+
+    margin-top: 30px;
 
     &--distribute {
         --display: flex;

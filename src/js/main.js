@@ -60,7 +60,7 @@ const formRegister = async () => {
 
 // formRegister();
 
-getModule("src/html/mascotas.html", "#container");
+// getModule("src/html/mascotas.html", "#container");
 
 
 
@@ -74,16 +74,22 @@ getModule("src/html/mascotas.html", "#container");
  * 
  * @returns { void }
  */
-const menu = (selector) => {
+const menu = async (selector) => {
     const menuHeader = document.querySelector(selector);
     if (!menuHeader) return;
 
-    menuHeader.onclick = (e) => {
+    let pathModule = localStorage.getItem("module");
+    pathModule ??= "src/html/mascotas.html";
+
+    await getModule(pathModule, "#container", true);
+
+    menuHeader.onclick = async (e) => {
         e.preventDefault();
         const element = e.target;
         
         if (element.href) {
-            getModule(element.href, "#container", true);
+            await getModule(element.href, "#container", true);
+            localStorage.setItem("module", element.href);
         }
     }
 };
