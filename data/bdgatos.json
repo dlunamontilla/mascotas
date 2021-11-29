@@ -1,0 +1,50 @@
+{
+    "gatos ": [
+        {
+            "id": 1,
+            "nombre": "pelusa",
+            "raza ": "siames",
+            "anio": "año1",
+            "personalidad": [
+                "tierno ",
+                "jugeton",
+                "cariñoso"
+            ],
+            "historia": "busca hogar permanente .",
+            "imagen": "src/imgadopcion/Cardg.png",
+            "genero": "hembra"
+        },
+        {
+            "id": 2,
+            "nombre": "Kity",
+            "raza ": "bombay",
+            "anio": "año1",
+            "personalidad": [
+                "tierno ",
+                "jugeton",
+                "cariñoso"
+            ],
+            "historia": "busca hogar permanente .",
+            "imagen": "src/imgadopcion/Card (1).png",
+            "genero": "hembra" 
+        },
+        {
+            "id": 1,
+            "nombre": "Bombon",
+            "raza ": "gato americano",
+            "anio": "año1",
+            "personalidad": [
+                "tierno ",
+                "jugeton",
+                "cariñoso"
+            ],
+            "historia": "busca hogar permanente .",
+            "imagen": "src/imgadopcion/Card (3).png",
+            "genero": "macho" 
+            
+        },
+        {
+           
+        }
+    ]
+}
