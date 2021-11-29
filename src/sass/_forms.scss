@@ -232,15 +232,22 @@ button,
     --icon-size: calc(var(--height) * 0.8);
     --gap: 10px;
 
+    --size-loading: calc(var(--height) * 0.8);
+
     min-height: var(--height);
     flex-grow: 1;
     text-align: center;
     padding-right: var(--gap);
-    
+    outline: medium none;
+
     background-color: transparent;
     color: white;
-    
-    
+    transition: 300ms ease;
+
+    &:focus {
+        box-shadow: 0 0 10px rgba($color-secundario, 0.6);
+    }
+
     &--dog,
     &--cat {
         --height: 100px;

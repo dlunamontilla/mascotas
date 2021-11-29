@@ -11,6 +11,18 @@
 </head>
 
 <body>
+    <template id="loading-template">
+        <div class="caja loading giro-constante" id="loading">
+            <svg viewBox="0 0 140 140" class="lienzo giro-intervalo">
+                <!-- Circunferencia con borde fijo-->
+                <!-- <circle class="cir cir--fijo" cx="70" cy="70" r="65" /> -->
+                
+                <!-- Circunferencia con borde animado -->
+                <circle class="cir cir--completando giro-trazo" cx="70" cy="70" r="65" />
+            </svg>
+        </div>
+    </template>
+
     <main>
         <header class="header">
             <div class="navigation navigation--header">
@@ -24,13 +36,21 @@
 
                 <ul class="menu" id="menu-header">
                     <li class="li menu__item"><a href="src/html/profile.html" class="menu__item__enlace">Perfil</a></li>
-                    <li class="li menu__item"><a href="src/html/mascotas.html" class="menu__item__enlace">Mascotas</a></li>
-                    <li class="li menu__item"><a href="src/html/registro.html" class="menu__item__enlace">Registro</a></li>
+                    <li class="li menu__item"><a href="src/html/mascotas.html" class="menu__item__enlace">Mascotas</a>
+                    </li>
+                    <li class="li menu__item"><a href="src/html/registro.html" class="menu__item__enlace">Registro</a>
+                    </li>
                 </ul>
             </div>
         </header>
 
         <div class="container" id="container"></div>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                Tatiana Castro
+            </div>
+        </footer>
     </main>
     <script src="src/js/md5.js"></script>
     <script src="src/js/main.js" type="module"></script>

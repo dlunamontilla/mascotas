@@ -3,6 +3,7 @@ import getModule from "./render.js";
 import {} from "./svg.js";
 
 import getUsers from "./modules/getusers.js";
+import getLoading from "./modules/loading.js";
 
 /**
  * Formulario de registro
@@ -63,6 +64,11 @@ const formRegister = (path) => {
     register.addEventListener("submit", async function (e) {
         e.preventDefault();
         const data = getFormData(register);
+        const button = register.querySelector("[type='submit']");
+        let textButton;
+
+        // Carga la animación al botón de envío del formulario:
+        if ( button ) textButton = getLoading(button);
 
         // Si el campo que se detecta es una contraseña la cifrará
         for (let key in data) {
@@ -80,6 +86,13 @@ const formRegister = (path) => {
 
         // Probaremos nuestra función antes de continuar:
         await getUsers("data/bdusers.json", "#users-data");
+        if (e.target.type === "submit") {
+            e.target.textContent = textButton;
+        }
+
+        // Termina la animación una vez completado el registro
+        // del usuario:
+        if (button) button.textContent = textButton;
     });
 };
 

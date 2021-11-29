@@ -1,4 +1,79 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap");
+/* Propiedades comunes del lienzo y la caja */
+.lienzo,
+.caja {
+  --diametro: var(--size-loading);
+  width: var(--diametro);
+  height: var(--diametro);
+}
+
+/* Lienzo donde se ubica la circunferencia */
+.lienzo {
+  transform: rotateZ(-90deg);
+}
+
+/* Circunferencia */
+.cir {
+  fill: none;
+}
+
+/* Circunferencia con el borde fijo */
+.cir--fijo {
+  stroke: #c39fde;
+  stroke-width: 5;
+}
+
+/* Circunferencia con el borde animado */
+.cir--completando {
+  stroke: white;
+  stroke-width: 10;
+  /* Matriz de guiones */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 80;
+  stroke-linecap: round;
+}
+
+/* Animación del trazo (stroke) */
+.giro-trazo {
+  animation: 1.5s ease giro-trazo infinite;
+  fill: none;
+}
+
+/* Animación de giro en intervalos de dos (02) segundos */
+.giro-intervalo {
+  animation: 1.5s ease giro-intervalo infinite;
+}
+
+/* Animación de giro constante*/
+.giro-constante {
+  animation: 3s linear giro-constante infinite;
+}
+
+/* Definición de animaciones utilizadas en 
+   en las clases anteriores */
+/* Desplazamiento de los guiones del trazo
+   de la circunferencia */
+@keyframes giro-trazo {
+  50% {
+    stroke-dashoffset: 440;
+  }
+}
+/* Giro en intervalo. Se aplicará en el lienzo */
+@keyframes giro-intervalo {
+  0% {
+    transform: rotateZ(-449deg);
+  }
+  50%,
+    100% {
+    transform: rotateZ(-90deg);
+  }
+}
+@keyframes giro-constante {
+  from {
+    transform: rotate(-359deg);
+  }
+}
 ::-moz-focus-inner {
   border: 0;
 }
@@ -7,6 +82,7 @@
   font-family: "Outfit", sans-serif;
   font-size: 17px;
   background-color: #a786df;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -133,18 +209,44 @@ hr {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px 0 rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 206, 0.3);
+}
+@media screen and (max-width: 1024px) {
+  .register {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  .register h1, .register h2, .register h3, .register h4, .register h5, .register h6 {
+    text-align: center;
+  }
+}
+.register h1, .register h2, .register h3, .register h4, .register h5, .register h6 {
+  color: white;
 }
 .register__item {
-  flex-grow: 1;
-  flex-basis: 50%;
   padding: 20px;
 }
 .register__item--users {
-  border-right: 1px solid #fdc7d7;
+  flex-grow: 1;
+  overflow: auto;
+}
+@media screen and (min-width: 1025px) {
+  .register__item--users {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 .register__item--users img {
-  max-width: 150px;
+  --height: 100px;
+  width: var(--height);
+  height: var(--height);
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+}
+.register__item--form {
+  flex-basis: 450px;
 }
 
 .interfaz {
@@ -161,8 +263,9 @@ hr {
 .table {
   border-collapse: collapse;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.5);
 }
 .table th, .table td {
   padding: 5px 10px;
@@ -196,6 +299,23 @@ hr {
 }
 .table td[colspan] {
   height: 70px;
+}
+
+.footer {
+  background-color: #333333;
+  color: #cccccc;
+  border-top: 1px solid;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100px;
+  font-size: 1.3rem;
 }
 
 [type="text"],
@@ -397,12 +517,18 @@ button:active,
   --height: 35px;
   --icon-size: calc(var(--height) * 0.8);
   --gap: 10px;
+  --size-loading: calc(var(--height) * 0.8);
   min-height: var(--height);
   flex-grow: 1;
   text-align: center;
   padding-right: var(--gap);
+  outline: medium none;
   background-color: transparent;
   color: white;
+  transition: 300ms ease;
+}
+.button:focus {
+  box-shadow: 0 0 10px rgba(15, 23, 44, 0.6);
 }
 .button--dog, .button--cat {
   --height: 100px;

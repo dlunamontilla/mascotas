@@ -1,6 +1,7 @@
 // @ts-check
 
 import createElement from "./createElement.js";
+import getLoading from "./loading.js";
 
 /**
  * Muestra la lista de usuarios a partir de un registro
@@ -86,11 +87,20 @@ const getUsers = async (url, selector) => {
         });
 
         
-        console.log( "Capturados", element.parentNode.parentNode.length );
-        if (!(data.usuarios.length > 0)) {
+        element.parentNode.parentNode.remove();
+        console.log( "Capturados", tbody.childNodes.length);
+        if (!(tbody.childNodes.length > 0)) {
             getUsers(url, selector);
         }
-        element.parentNode.parentNode.remove();
+    }
+
+    // @ts-ignore
+    usersContent.onclick = (e) => {
+        const button = e.target;
+
+        if (button.type === "submit") {
+            getLoading(button);
+        }
     }
 }
 
