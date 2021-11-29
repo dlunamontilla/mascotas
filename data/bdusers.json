@@ -11,26 +11,6 @@
       "id": 3
     },
     {
-      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
-      "name": "Kevin",
-      "lastname": "Hernández",
-      "username": "kevin",
-      "email": "kevin@gmail.com",
-      "password": "57bb4b485f52628aab93cbde76d322d0",
-      "description": "Contenido de prueba",
-      "id": 4
-    },
-    {
-      "url": "https://cdn.pixabay.com/photo/2021/08/26/15/39/cat-6576397__340.jpg",
-      "name": "Mascota",
-      "lastname": "Hernández",
-      "username": "mascota",
-      "email": "mascota@gmail.com",
-      "password": "1c1d5e86e3024e82ba1568aa37c5dfeb",
-      "description": "Teclados de prueba",
-      "id": 5
-    },
-    {
       "url": "https://cdn.pixabay.com/photo/2017/04/05/10/45/girl-2204622_960_720.jpg",
       "name": "Tatiana",
       "lastname": "Castro",

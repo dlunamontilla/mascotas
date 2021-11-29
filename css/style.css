@@ -198,11 +198,17 @@ hr {
 
 .container {
   --padding: 20px;
+  display: flex;
+  align-items: center;
   max-width: 1200px;
   width: calc(100% - 20px);
   margin: 0 auto;
+  min-height: calc(100vh - 185px);
   padding-top: var(--padding);
   padding-bottom: var(--padding);
+}
+.container__inner {
+  width: 100%;
 }
 
 .register {
@@ -258,6 +264,7 @@ hr {
   margin: 20px auto;
   border-radius: 5px;
   transition: 300ms ease;
+  box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
 }
 
 .table {
@@ -302,9 +309,9 @@ hr {
 }
 
 .footer {
-  background-color: #333333;
-  color: #cccccc;
-  border-top: 1px solid;
+  background-color: #001066;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 4px solid;
 }
 .footer__inner {
   display: flex;
@@ -390,7 +397,7 @@ button:active,
   padding-bottom: calc(var(--padding) * 2);
   border: 1px solid #f96591;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(15, 23, 44, 0.3);
+  box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
   padding-left: var(--padding);
   padding-right: var(--padding);
   max-width: 400px;
