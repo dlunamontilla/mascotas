@@ -6,4 +6,43 @@
     left: 0; right: 0;
     top: 0; bottom: 0;
     overflow: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-mascotas {
+    max-width: 500px;
+
+    &__photo {
+        position: relative;
+        background-color: darken(white, 80);
+
+        &__exit {
+            --size: 40px;
+
+            border-radius: calc(var(--size) / 2);
+            width: var(--size);
+            height: var(--size);
+
+            background-color: $color-base;
+            color: white;
+
+            right: auto;
+            left: 10px;
+            top: 10px;
+        }
+        
+        img, &__exit {
+            position: absolute;
+            margin: auto;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
