@@ -266,6 +266,9 @@ hr {
   transition: 300ms ease;
   box-shadow: 4px 4px 0 0 rgba(255, 255, 255, 0.4);
 }
+.interfaz hr {
+  border-bottom: 1px solid #0f172c;
+}
 
 .table {
   border-collapse: collapse;
@@ -323,6 +326,10 @@ hr {
   margin: 0 auto;
   min-height: 100px;
   font-size: 1.3rem;
+}
+
+.animal-card {
+  border: 1px solid;
 }
 
 [type="text"],
@@ -547,6 +554,10 @@ button:active,
   cursor: default;
   max-width: calc(var(--height) * 3);
   color: white;
+  text-decoration: none;
+}
+.button--dog > *, .button--cat > * {
+  pointer-events: none;
 }
 .button--dog {
   background-color: #000033;

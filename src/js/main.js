@@ -4,6 +4,7 @@ import {} from "./svg.js";
 
 import getUsers from "./modules/getusers.js";
 import getLoading from "./modules/loading.js";
+import { getAnimals } from "./modules/getAnimals.js";
 
 /**
  * Formulario de registro
@@ -140,3 +141,17 @@ const menu = async (selector) => {
 };
 
 menu("#menu-header");
+
+const container = document.querySelector("#container");
+
+if (container) {
+    container.onclick = (e) => {
+        const element = e.target;
+        const { especie } = element.dataset;
+
+        if ( especie && element.href ) {
+            e.preventDefault();
+            getAnimals(element.href, "#animal-container", especie);
+        }
+    }
+}

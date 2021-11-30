@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nombre": "pelusa",
-            "raza ": "siames",
+            "raza": "siames",
             "anio": "año1",
             "personalidad": [
                 "tierno ",
@@ -17,7 +17,7 @@
         {
             "id": 2,
             "nombre": "Kity",
-            "raza ": "bombay",
+            "raza": "bombay",
             "anio": "año1",
             "personalidad": [
                 "tierno ",
@@ -26,12 +26,12 @@
             ],
             "historia": "busca hogar permanente .",
             "imagen": "src/imgadopcion/Card (1).png",
-            "genero": "hembra" 
+            "genero": "hembra"
         },
         {
             "id": 1,
             "nombre": "Bombon",
-            "raza ": "gato americano",
+            "raza": "gato americano",
             "anio": "año1",
             "personalidad": [
                 "tierno ",
@@ -40,11 +40,7 @@
             ],
             "historia": "busca hogar permanente .",
             "imagen": "src/imgadopcion/Card (3).png",
-            "genero": "macho" 
-            
-        },
-        {
-           
+            "genero": "macho"
         }
     ]
 }
