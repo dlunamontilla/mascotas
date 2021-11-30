@@ -33,7 +33,7 @@ const getAnimals = async (url, selector, especie = "gatos") => {
 
     const [cards] = createElement("div");
 
-    cards.classList.add(".animal-card");
+    cards.classList.add("animal-card");
 
     animals.forEach(animal => {
         const {nombre, raza, imagen} = animal;
@@ -54,6 +54,7 @@ const getAnimals = async (url, selector, especie = "gatos") => {
         );
     });
 
+    container.textContent = "";
     container.appendChild(cards);
 };
 
