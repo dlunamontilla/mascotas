@@ -17,14 +17,39 @@ const getLoading = (element) => {
 
     //  @ts-ignore
     const loading = template.content.firstElementChild.cloneNode(true);
+    const textElement = element.innerHTML;
     
-    const textElement = element.textContent;
-    element.textContent = "";
+    const { sizeLoading, notOverwrite, color } = element.dataset;
+    
+    !notOverwrite
+        ? element.textContent = ""
+        : loading.classList.add("caja--absolute");
 
-    console.log( loading );
+    /** @type { string } */
+    let attributes = "";
+
+    // Si el usuario estable un tamaño mediante atributo:
+    if ( sizeLoading ) {
+        const size = Number(sizeLoading);
+
+        if ( size > 0 ) {
+            attributes += `--size-loading: ${size}px;`;
+        }
+    }
+
+    // Si el usuario establece un color mediante atributo:
+    if ( color ) {
+        attributes += `--color: ${String(color)}`;
+    }
+
+    console.log(String(attributes));
+
+    if (attributes.length > 0) loading.setAttribute("style", attributes);
 
     // Aplicar animación de carga sobre el elemento seleccionado:
     element.appendChild(loading);
+
+    console.log( textElement );
 
     return textElement;
 }

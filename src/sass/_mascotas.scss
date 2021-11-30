@@ -1,12 +1,13 @@
 .animal-container {
     min-height: 60px;
+    position: relative;
 }
 
 .animal-card {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 
-    gap: 10px;
+    gap: 12px;
 
     &__item {
         display: block;

@@ -1,4 +1,5 @@
 import createElement from "./createElement.js";
+import getLoading from "./loading.js";
 
 /**
  *
@@ -24,6 +25,9 @@ const getAnimals = async (url, selector, especie = "gatos") => {
             : null;
 
     if (typeof url !== "string" || !container) return;
+
+    // Indicar al usuario que se están cargando los datos:
+    getLoading(container);
 
     const response = await fetch(url);
     const data = await response.json();

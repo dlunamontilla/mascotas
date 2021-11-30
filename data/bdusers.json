@@ -1,14 +1,44 @@
 {
   "usuarios": [
     {
-      "url": "https://th.bing.com/th/id/OIP.FMRyeNOgUH_-cUtFQyyV-QHaLZ?w=185&h=285&c=7&r=0&o=5&pid=1.7",
-      "name": "lorena",
-      "lastname": "castro",
-      "username": "tatis_elka25",
-      "email": "tatis_elka@hotmail.com",
-      "password": "202cb962ac59075b964b07152d234b70",
-      "description": "fea",
+      "url": "https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg",
+      "name": "Perro",
+      "lastname": "García",
+      "username": "perro",
+      "email": "perro@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
       "id": 1
+    },
+    {
+      "url": "https://avatars.githubusercontent.com/u/28575628?v=4",
+      "name": "David",
+      "lastname": "Luna",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
+      "id": 2
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2021/08/26/15/39/cat-6576397__340.jpg",
+      "name": "Estefany",
+      "lastname": "Díaz",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
+      "id": 3
+    },
+    {
+      "url": "https://avatars.githubusercontent.com/u/28575628?v=4",
+      "name": "David Eduardo",
+      "lastname": "Luna Montilla",
+      "username": "dlunamontilla",
+      "email": "davidlunamontilla@gmail.com",
+      "password": "50eeb5d6417b1687fd71bb3952a524db",
+      "description": "Ciencia de datos",
+      "id": 4
     }
   ]
 }

@@ -8,6 +8,18 @@
   height: var(--diametro);
 }
 
+.caja {
+  --color: white;
+}
+.caja--absolute {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 /* Lienzo donde se ubica la circunferencia */
 .lienzo {
   transform: rotateZ(-90deg);
@@ -26,7 +38,7 @@
 
 /* Circunferencia con el borde animado */
 .cir--completando {
-  stroke: white;
+  stroke: var(--color);
   stroke-width: 10;
   /* Matriz de guiones */
   stroke-dasharray: 440;
@@ -330,12 +342,13 @@ hr {
 
 .animal-container {
   min-height: 60px;
+  position: relative;
 }
 
 .animal-card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 .animal-card__item {
   display: block;

@@ -8,6 +8,17 @@
     height: var(--diametro);
 }
 
+.caja {
+    --color: white;
+
+    &--absolute {
+        position: absolute;
+        margin: auto;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+    }
+}
+
 /* Lienzo donde se ubica la circunferencia */
 .lienzo {
     transform: rotateZ(-90deg);
@@ -26,7 +37,7 @@
 
 /* Circunferencia con el borde animado */
 .cir--completando {
-    stroke: white;
+    stroke: var(--color);
     stroke-width: 10;
 
     /* Matriz de guiones */
