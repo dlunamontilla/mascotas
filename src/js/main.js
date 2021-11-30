@@ -3,7 +3,7 @@ import getModule from "./render.js";
 import {} from "./svg.js";
 
 import getUsers from "./modules/getusers.js";
-import getLoading from "./modules/loading.js";
+import getLoading from "./modules/getLoading.js";
 import { getAnimals } from "./modules/getAnimals.js";
 
 /**

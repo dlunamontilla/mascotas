@@ -1,5 +1,5 @@
 import createElement from "./createElement.js";
-import getLoading from "./loading.js";
+import getLoading from "./getLoading.js";
 
 /**
  *

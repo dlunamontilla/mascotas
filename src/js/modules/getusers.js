@@ -1,7 +1,7 @@
 // @ts-check
 
 import createElement from "./createElement.js";
-import getLoading from "./loading.js";
+import getLoading from "./getLoading.js";
 
 /**
  * Muestra la lista de usuarios a partir de un registro
