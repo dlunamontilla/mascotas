@@ -802,6 +802,17 @@ button:active,
   height: auto;
   margin-right: 10px;
 }
+.modal-mascotas__container__history {
+  padding: 30px 0;
+}
+.modal-mascotas__container__history h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.modal-mascotas__container__history p {
+  margin-top: 0;
+  line-height: 1.6;
+}
 
 .grid-personality {
   --size-icon: 40px;
