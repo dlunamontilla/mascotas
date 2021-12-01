@@ -2,45 +2,75 @@
     "gatos": [
         {
             "id": 1,
-            "nombre": "pelusa",
-            "raza": "siames",
+            "nombre": "Pelusa",
+            "raza": "Siames",
             "anio": "año1",
             "personalidad": [
-                "tierno ",
-                "jugeton",
-                "cariñoso"
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
             ],
-            "historia": "busca hogar permanente .",
+            "historia": "Busca hogar permanente.",
             "imagen": "src/imgadopcion/Cardg.png",
-            "genero": "hembra"
+            "genero": "Hembra",
+            "ubicacion": "4140 Parker Nuevo México 31140"
         },
         {
             "id": 2,
             "nombre": "Kity",
-            "raza": "bombay",
+            "raza": "Bombay",
             "anio": "año1",
             "personalidad": [
-                "tierno ",
-                "jugeton",
-                "cariñoso"
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
             ],
-            "historia": "busca hogar permanente .",
+            "historia": "Busca hogar permanente.",
             "imagen": "src/imgadopcion/Card (1).png",
-            "genero": "hembra"
+            "genero": "Hembra",
+            "ubicacion": "New Jersey"
         },
         {
             "id": 3,
             "nombre": "Bombon",
-            "raza": "gato americano",
+            "raza": "Gato Americano",
             "anio": "año1",
             "personalidad": [
-                "tierno ",
-                "jugeton",
-                "cariñoso"
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
             ],
             "historia": "busca hogar permanente .",
             "imagen": "src/imgadopcion/Card (3).png",
-            "genero": "macho"
+            "genero": "Macho",
+            "ubicacion": "Canada"
         }
     ]
 }

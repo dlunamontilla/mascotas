@@ -49,8 +49,6 @@ const getLoading = (element) => {
     // Aplicar animación de carga sobre el elemento seleccionado:
     element.appendChild(loading);
 
-    console.log( textElement );
-
     return textElement;
 }
 
