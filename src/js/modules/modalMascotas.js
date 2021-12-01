@@ -25,19 +25,24 @@ const exitModal = (selector) => {
 
     button.onclick = () => {
         modalContainer.classList.remove("modal-container--show");
+        document.body.removeAttribute("style");
     };
 };
 
 /**
  *
+ * @param {Object<string, string|number>} data Debe ingresar
+ * un objeto como parámetro.
+ *
  * @param {number} id Ingrese el identificador para
  * cargar los datos a la ventana modal de las mascotas.
  *
- * @param {string | HTMLDivElement}
+ * @param {string | HTMLDivElement} selector Debe ingresar un
+ * selector o un elemento DIV.
  *
  * @returns { void }
  */
-const openModal = (id, selector) => {
+const openModal = (id, data, selector) => {
     if (isNaN(id)) return;
 
     /** @type {HTMLDivElement | null} */
@@ -51,6 +56,12 @@ const openModal = (id, selector) => {
     if (!isDiv(container)) return;
 
     modalContainer.classList.add("modal-container--show");
+    document.body.setAttribute("style", "overflow: hidden");
+
+    const photo = modalContainer.querySelector("#photo-mascota");
+    if (photo) photo.src = data.imagen;
+
+    console.log( data, photo );
 };
 
 // Probar el botón:

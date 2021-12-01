@@ -31,6 +31,8 @@ const getAnimals = async (url, selector, especie = "gatos") => {
     getLoading(container);
 
     const response = await fetch(url);
+
+    /** @type {Array<Object<string, string | number>> } */
     const data = await response.json();
 
     const animals = data[especie];
@@ -64,11 +66,6 @@ const getAnimals = async (url, selector, especie = "gatos") => {
 
     let count = 0;
     cards.addEventListener("click", (e) => {
-        e.preventDefault();
-        count++;
-        console.log( count );
-
-    
         const element = e.target;
         const { id } = element.dataset;
 
@@ -76,10 +73,8 @@ const getAnimals = async (url, selector, especie = "gatos") => {
     
         if (id) {
             e.preventDefault();
-            console.log("id:", id);
-            console.log( e.target);
-
-            openModal(Number(id), "#modal-container");
+            const search = data[especie].find(row => Number(row.id) === Number(id));
+            openModal(Number(id), search, "#modal-container");
         }
     });
 };
