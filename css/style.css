@@ -722,8 +722,8 @@ button:active,
   border-radius: calc(var(--size) / 2);
   width: var(--size);
   height: var(--size);
-  background-color: #fdc7d7;
-  color: black;
+  background-color: #0f172c;
+  color: rgba(255, 255, 255, 0.7);
   right: auto;
   bottom: auto;
   left: 10px;

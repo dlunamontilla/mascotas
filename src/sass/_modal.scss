@@ -29,8 +29,8 @@
             width: var(--size);
             height: var(--size);
 
-            background-color: $color-base;
-            color: black;
+            background-color: $color-secundario;
+            color: rgba(white, 0.7);
 
             right: auto;
             bottom: auto;
@@ -116,7 +116,7 @@
         &__location {
             display: flex;
             align-items: center;
-            
+
             img {
                 width: var(--size-icon);
                 height: auto;
