@@ -747,5 +747,15 @@ button:active,
   object-position: var(--object-position);
   z-index: 0;
 }
+.modal-mascotas__container {
+  position: relative;
+  margin-top: -30px;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  color: #000033;
+  padding: 10px;
+  transition: 300ms ease;
+  z-index: 2;
+}
 
 /*# sourceMappingURL=style.css.map */

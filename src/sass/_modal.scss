@@ -64,4 +64,16 @@
             z-index: 0;
         }
     }
+
+    &__container {
+        position: relative;
+        margin-top: -30px;
+        border-radius: 20px 20px 0 0;
+        background-color: white;
+        color: $color;
+        padding: 10px;
+
+        transition: 300ms ease;
+        z-index: 2;
+    }
 }
