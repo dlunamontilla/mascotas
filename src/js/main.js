@@ -1,4 +1,5 @@
 import {} from "./modules/getSVG.js";
+import {} from "./modules/modalMascotas.js";
 
 import { getFormData } from "./register.js";
 import getModule from "./render.js";

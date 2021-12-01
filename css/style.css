@@ -705,6 +705,9 @@ button:active,
   display: flex;
   justify-content: center;
 }
+.modal-container--hidden {
+  display: none;
+}
 
 .modal-mascotas {
   --size-icon: 30px;
