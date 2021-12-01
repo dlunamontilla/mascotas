@@ -9,15 +9,16 @@
 
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .modal-mascotas {
-    max-width: 500px;
+    max-width: 450px;
 
     &__photo {
         position: relative;
         background-color: darken(white, 80);
+        border: 1p solid white;
+        padding-top: calc(100% * (31 / 50 + 1));
 
         &__exit {
             --size: 40px;
@@ -27,7 +28,7 @@
             height: var(--size);
 
             background-color: $color-base;
-            color: white;
+            color: black;
 
             right: auto;
             left: 10px;
@@ -37,12 +38,30 @@
         img, &__exit {
             position: absolute;
             margin: auto;
+
+            z-index: 1;
         }
 
         img {
             display: block;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
+            
+            --object-fit: cover;
+            --object-position: center top;
+
+            -webkit-object-fit: var(--object-fit);
+            -webkit-object-position: var(--object-position);
+
+            -moz-object-fit: var(--object-fit);
+            -moz-object-position: var(--object-position);
+
+            object-fit: var(--object-fit);
+            object-position: var(--object-position);
+
+            z-index: 0;
         }
     }
 }
