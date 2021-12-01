@@ -96,10 +96,8 @@ const openModal = (id, data, selector) => {
         history.insertAdjacentHTML(
             'beforeend',
 
-            `
-            <h3>Historia de ${data.nombre}</h3>
-            <p>${data.historia}</p>
-            `
+            `<h3>Historia de ${data.nombre}</h3>
+            <p>${data.historia}</p>`
         );
     }
 };
