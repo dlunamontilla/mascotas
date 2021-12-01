@@ -88,6 +88,20 @@ const openModal = (id, data, selector) => {
         });
 
     }
+
+    const history = modalContainer.querySelector("#history-mascota");
+    if (history) {
+        history.textContent = "";
+
+        history.insertAdjacentHTML(
+            'beforeend',
+
+            `
+            <h3>Historia de ${data.historia}</h3>
+            <p>${data.historia}</p>
+            `
+        );
+    }
 };
 
 // Probar el botón:
