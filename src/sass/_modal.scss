@@ -23,9 +23,8 @@
         padding-top: calc(100% * (3/2));
 
         &__exit {
-            --size: 40px;
+            --size: 45px;
 
-            display: block;
             border-radius: calc(var(--size) / 2);
             width: var(--size);
             height: var(--size);
@@ -42,21 +41,24 @@
 
             padding: 10px;
 
-            button {
-                width: var(--size);
-                height: va(--size);
+            svg {
+                display: block;
             }
         }
         
         img, &__exit {
+            display: flex;
             position: absolute;
             margin: auto;
+            font-size: 1.4rem;
+            color: white;
+            align-items: center;
+            justify-content: center;
 
             z-index: 1;
         }
 
         img {
-            display: block;
             left: 0;
             top: 0;
             width: 100%;
@@ -132,10 +134,6 @@
                 height: auto;
                 margin-right: 10px;
             }
-        }
-
-        &__personality {
-
         }
 
         &__history {

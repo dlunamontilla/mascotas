@@ -718,8 +718,7 @@ button:active,
   padding-top: calc(100% * (3/2));
 }
 .modal-mascotas__photo__exit {
-  --size: 40px;
-  display: block;
+  --size: 45px;
   border-radius: calc(var(--size) / 2);
   width: var(--size);
   height: var(--size);
@@ -732,17 +731,20 @@ button:active,
   z-index: 3;
   padding: 10px;
 }
-.modal-mascotas__photo__exit button {
-  width: var(--size);
-  height: va(--size);
+.modal-mascotas__photo__exit svg {
+  display: block;
 }
 .modal-mascotas__photo img, .modal-mascotas__photo__exit {
+  display: flex;
   position: absolute;
   margin: auto;
+  font-size: 1.4rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
 }
 .modal-mascotas__photo img {
-  display: block;
   left: 0;
   top: 0;
   width: 100%;
