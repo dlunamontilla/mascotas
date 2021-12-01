@@ -791,6 +791,27 @@ button:active,
 .modal-mascotas__container__location img {
   width: var(--size-icon);
   height: auto;
+  margin-right: 10px;
+}
+
+.grid-personality {
+  --size-icon: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 15px;
+}
+.grid-personality__item {
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+.grid-personality__item img {
+  width: var(--size-icon);
+  height: auto;
+}
+.grid-personality__item p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
