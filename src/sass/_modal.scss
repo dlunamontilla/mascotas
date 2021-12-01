@@ -13,6 +13,7 @@
 
 .modal-mascotas {
     --size-icon: 30px;
+    --size-button-like: 45px;
 
     max-width: 450px;
     &__photo {
@@ -104,11 +105,20 @@
                 }
 
                 img {
-                    width: var(--size-icon);
+                    width: calc(var(--size-button-like) * (0.5));
+                    
                 }
 
                 button {
-                    background-color: darken(white, 30);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: calc(var(--size-button-like) / 2);
+                    background-color: darken(white, 3);
+                    border: 1px solid white;
+                    box-shadow: 0 0 10px silver;
+                    width: var(--size-button-like);
+                    height: var(--size-button-like);
                 }
             }
         }
@@ -138,8 +148,8 @@
     gap: 15px;
 
     &__item {
-        border: 1px solid;
-        border-radius: 5px;
+        border: 3px solid darken(white, 30);
+        border-radius: 10px;
         text-align: center;
         padding: 10px;
 

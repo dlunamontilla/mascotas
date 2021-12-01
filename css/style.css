@@ -708,6 +708,7 @@ button:active,
 
 .modal-mascotas {
   --size-icon: 30px;
+  --size-button-like: 45px;
   max-width: 450px;
 }
 .modal-mascotas__photo {
@@ -779,10 +780,18 @@ button:active,
   margin-right: 10px;
 }
 .modal-mascotas__container__title__inner img {
-  width: var(--size-icon);
+  width: calc(var(--size-button-like) * (0.5));
 }
 .modal-mascotas__container__title__inner button {
-  background-color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--size-button-like) / 2);
+  background-color: #f7f7f7;
+  border: 1px solid white;
+  box-shadow: 0 0 10px silver;
+  width: var(--size-button-like);
+  height: var(--size-button-like);
 }
 .modal-mascotas__container__location {
   display: flex;
@@ -801,8 +810,8 @@ button:active,
   gap: 15px;
 }
 .grid-personality__item {
-  border: 1px solid;
-  border-radius: 5px;
+  border: 3px solid #b3b3b3;
+  border-radius: 10px;
   text-align: center;
   padding: 10px;
 }
