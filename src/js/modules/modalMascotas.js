@@ -97,7 +97,7 @@ const openModal = (id, data, selector) => {
             'beforeend',
 
             `
-            <h3>Historia de ${data.historia}</h3>
+            <h3>Historia de ${data.nombre}</h3>
             <p>${data.historia}</p>
             `
         );
