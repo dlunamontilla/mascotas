@@ -1,3 +1,5 @@
+import {} from "./modules/getSVG.js";
+
 import { getFormData } from "./register.js";
 import getModule from "./render.js";
 import {} from "./svg.js";
