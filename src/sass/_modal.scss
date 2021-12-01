@@ -12,17 +12,19 @@
 }
 
 .modal-mascotas {
-    max-width: 450px;
+    --size-icon: 30px;
 
+    max-width: 450px;
     &__photo {
         position: relative;
         background-color: darken(white, 80);
         border: 1p solid white;
-        padding-top: calc(100% * (31 / 50 + 1));
+        padding-top: calc(100% * (3/2));
 
         &__exit {
             --size: 40px;
 
+            display: block;
             border-radius: calc(var(--size) / 2);
             width: var(--size);
             height: var(--size);
@@ -31,8 +33,18 @@
             color: black;
 
             right: auto;
+            bottom: auto;
             left: 10px;
             top: 10px;
+
+            z-index: 3;
+
+            padding: 10px;
+
+            button {
+                width: var(--size);
+                height: va(--size);
+            }
         }
         
         img, &__exit {
@@ -69,11 +81,46 @@
         position: relative;
         margin-top: -30px;
         border-radius: 20px 20px 0 0;
-        background-color: white;
+        background-color: darken(white, 5);
         color: $color;
         padding: 10px;
 
         transition: 300ms ease;
         z-index: 2;
+
+        &__title {
+            justify-content: space-between;
+            
+            &, &__inner {
+                display: flex;
+                align-items: center;
+            }
+
+            &__inner {
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+
+                img {
+                    width: var(--size-icon);
+                }
+
+                button {
+                    background-color: darken(white, 30);
+                }
+            }
+        }
+
+        &__location {
+            display: flex;
+            align-items: center;
+            
+            img {
+                width: var(--size-icon);
+                height: auto;
+            }
+        }
     }
 }
