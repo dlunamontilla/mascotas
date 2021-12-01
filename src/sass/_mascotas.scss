@@ -20,6 +20,10 @@
         overflow: hidden;
         padding-top: calc(100% * (155 / 250 + 1));
 
+        & > * {
+            pointer-events: none;
+        }
+        
         h4,
         p {
             margin: 0;

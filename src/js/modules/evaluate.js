@@ -32,8 +32,14 @@ const isButton = (element) => {
     return evaluate(element) === "[object HTMLButtonElement]";
 };
 
+/**
+ * @param {*} element Debe evaluar si efectivamente, el
+ * elemento que pasa como parámetro es un enlace.
+ *
+ * @returns {boolean}
+ */
+const isAnchor = (element) => {
+    return evaluate(element) === "[object HTMLAnchorElement]";
+};
 
-export {
-    isDiv,
-    isButton
-}
+export { isDiv, isButton, isAnchor };

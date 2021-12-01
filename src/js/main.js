@@ -156,5 +156,7 @@ if (container) {
             e.preventDefault();
             getAnimals(element.href, "#animal-container", especie);
         }
+
+        
     }
 }

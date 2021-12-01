@@ -1,4 +1,8 @@
 .modal-container {
+    --display: none;
+    --animation: none;
+
+    display: var(--display);
     position: fixed;
     background-color: rgba(black, 0.7);
 
@@ -6,12 +10,15 @@
     left: 0; right: 0;
     top: 0; bottom: 0;
     overflow: auto;
-
-    display: flex;
     justify-content: center;
 
     &--hidden {
-        display: none;
+        --display: none;
+    }
+
+    &--show {
+        --display: flex;
+        --animation: 300ms ease fadeIn 1;
     }
 }
 
@@ -19,6 +26,7 @@
     --size-icon: 30px;
     --size-button-like: 45px;
 
+    animation: var(--animation);
     max-width: 450px;
     &__photo {
         position: relative;
@@ -182,5 +190,12 @@
         p {
             margin: 0;
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+        transform: scale(0.98);
     }
 }

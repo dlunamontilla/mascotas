@@ -1,5 +1,6 @@
 import createElement from "./createElement.js";
 import getLoading from "./getLoading.js";
+import { openModal } from "./modalMascotas.js";
 
 /**
  *
@@ -40,12 +41,12 @@ const getAnimals = async (url, selector, especie = "gatos") => {
     cards.classList.add("animal-card");
 
     animals.forEach(animal => {
-        const {nombre, raza, imagen} = animal;
+        const {id, nombre, raza, imagen} = animal;
 
         cards.insertAdjacentHTML(
             'beforeend',
 
-            `<a href="#" class="animal-card__item">
+            `<a href="data/bd${especie}.json" class="animal-card__item" data-id="${id}">
                 <div class="animal-card__item__photo">
                     <img src="${imagen}" alt="${nombre}" />
                 </div>
@@ -60,6 +61,27 @@ const getAnimals = async (url, selector, especie = "gatos") => {
 
     container.textContent = "";
     container.appendChild(cards);
+
+    let count = 0;
+    cards.addEventListener("click", (e) => {
+        e.preventDefault();
+        count++;
+        console.log( count );
+
+    
+        const element = e.target;
+        const { id } = element.dataset;
+
+        console.log( id, element );
+    
+        if (id) {
+            e.preventDefault();
+            console.log("id:", id);
+            console.log( e.target);
+
+            openModal(Number(id), "#modal-container");
+        }
+    });
 };
 
 export { getAnimals };

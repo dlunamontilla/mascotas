@@ -360,6 +360,9 @@ hr {
   overflow: hidden;
   padding-top: calc(100% * (155 / 250 + 1));
 }
+.animal-card__item > * {
+  pointer-events: none;
+}
 .animal-card__item h4,
 .animal-card__item p {
   margin: 0;
@@ -694,6 +697,9 @@ button:active,
 }
 
 .modal-container {
+  --display: none;
+  --animation: none;
+  display: var(--display);
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   margin: auto;
@@ -702,16 +708,20 @@ button:active,
   top: 0;
   bottom: 0;
   overflow: auto;
-  display: flex;
   justify-content: center;
 }
 .modal-container--hidden {
-  display: none;
+  --display: none;
+}
+.modal-container--show {
+  --display: flex;
+  --animation: 300ms ease fadeIn 1;
 }
 
 .modal-mascotas {
   --size-icon: 30px;
   --size-button-like: 45px;
+  animation: var(--animation);
   max-width: 450px;
 }
 .modal-mascotas__photo {
@@ -840,6 +850,13 @@ button:active,
 }
 .grid-personality__item p {
   margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
