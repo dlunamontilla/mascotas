@@ -77,12 +77,14 @@ const openModal = (id, data, selector) => {
         const personalidad = data.personalidad || [];
 
         personalidad.forEach(object => {
+            const { imagen, es } = object;
+
             personality.insertAdjacentHTML(
                 'beforeend',
     
                 `<div class="grid-personality__item">
-                    <img src="${object.imagen}" alt="${object.es}" />
-                    <p>${object.es}</p>
+                    <img src="${imagen}" alt="${es}" />
+                    <p>${es}</p>
                 </div>`
             );
         });

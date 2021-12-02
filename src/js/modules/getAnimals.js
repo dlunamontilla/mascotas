@@ -40,6 +40,7 @@ const getAnimals = async (url, selector, especie = "gatos") => {
 
     const [cards] = createElement("div");
 
+    // Contenedor directo de las mascotas:
     cards.classList.add("animal-card");
 
     animals.forEach(animal => {
@@ -48,6 +49,7 @@ const getAnimals = async (url, selector, especie = "gatos") => {
         cards.insertAdjacentHTML(
             'beforeend',
 
+            // Las tarjetas de perros o gatos:
             `<a href="data/bd${especie}.json" class="animal-card__item" data-id="${id}">
                 <div class="animal-card__item__photo">
                     <img src="${imagen}" alt="${nombre}" />
@@ -64,12 +66,9 @@ const getAnimals = async (url, selector, especie = "gatos") => {
     container.textContent = "";
     container.appendChild(cards);
 
-    let count = 0;
     cards.addEventListener("click", (e) => {
         const element = e.target;
         const { id } = element.dataset;
-
-        console.log( id, element );
     
         if (id) {
             e.preventDefault();
